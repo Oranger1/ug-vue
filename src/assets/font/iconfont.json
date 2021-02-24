@@ -1,0 +1,16 @@
+{
+  "id": "2334168",
+  "name": "管理系统",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "982636",
+      "name": "收缩",
+      "font_class": "weibiaoti535",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    }
+  ]
+}
