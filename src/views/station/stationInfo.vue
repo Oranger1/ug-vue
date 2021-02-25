@@ -1,93 +1,55 @@
 <template>
-    <div id="main">
-        <div :style="{height:'400px',width:'100%'}" ref="myEchart"></div>
-    </div>
-
-    
+  <div class="tubemap" id="tube-map"></div>
 </template>
 
 <script>
-import echarts from "echarts";
-    export default {
-        data () {
-            return {
-                
-            }
-        },
-        mounted() {
-            let myChart = echarts.init(document.getElementById('main')); //这里是为了获得容器所在位置    
-            window.onresize = myChart.resize;
-            myChart.setOption({ // 进行相关配置
-          backgroundColor: "#02AFDB",
-          tooltip: {}, // 鼠标移到图里面的浮动提示框
-          dataRange: {
-            show: false,
-            min: 0,
-            max: 1000,
-            text: ['High', 'Low'],
-            realtime: true,
-            calculable: true,
-            color: ['orangered', 'yellow', 'lightskyblue']
-          },
-          geo: { // 这个是重点配置区
-            map: 'china', // 表示中国地图
-            roam: true,
-            label: {
-              normal: {
-                show: true, // 是否显示对应地名
-                textStyle: {
-                  color: 'rgba(0,0,0,0.4)'
-                }
-              }
-            },
-            itemStyle: {
-              normal: {
-                borderColor: 'rgba(0, 0, 0, 0.2)'
-              },
-              emphasis: {
-                areaColor: null,
-                shadowOffsetX: 0,
-                shadowOffsetY: 0,
-                shadowBlur: 20,
-                borderWidth: 0,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
-              }
-            }
-          },
-          series: [{
-              type: 'scatter',
-              coordinateSystem: 'geo' // 对应上方配置
-            },
-            {
-              name: '启动次数', // 浮动框的标题
-              type: 'map',
-              geoIndex: 0,
-              data: [{
-                "name": "北京",
-                "value": 599
-              }, {
-                "name": "上海",
-                "value": 142
-              }, {
-                "name": "黑龙江",
-                "value": 44
-              }, {
-                "name": "深圳",
-                "value": 92
-              }, {
-                "name": "湖北",
-                "value": 810
-              }, {
-                "name": "四川",
-                "value": 453
-              }]
-            }
-          ]
-        })
-        },
+import * as d3 from 'd3'
+import * as tubeMap from '@/js/map/d3-tube-map.js'
+import londonTubeJson from './london-tube.json'
+
+export default {
+  data () {
+    return {
+      container: null
     }
+  },
+  mounted() {
+    this.container = d3.select("#tube-map");
+    var width = 1600;
+    var height = 1000;
+    var map = tubeMap.tubeMap().width(width).height(height).margin({ top: 20, right: 20, bottom: 40, left: 100 })
+
+    this.initMapData(londonTubeJson, map)
+  },
+  methods: {
+    initMapData (data, map) {
+      this.container.datum(data).call(map);
+
+      var svg = this.container.select("svg");
+
+      var zoom = d3.zoom().scaleExtent([0.5, 6]).on("zoom", zoomed);
+
+      var zoomContainer = svg.call(zoom);
+      var initialScale = 0.6;
+      var initialTranslate = [-150, 0];
+
+      zoom.scaleTo(zoomContainer, initialScale);
+      zoom.translateTo(
+        zoomContainer,
+        initialTranslate[0],
+        initialTranslate[1]
+      );
+
+      function zoomed(event) {
+        svg.select("g").attr("transform", event.transform.toString());
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
-
+.tubemap{
+  height: 100%;
+}
 </style>
