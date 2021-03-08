@@ -1,618 +1,1310 @@
 {
-  "stations": {
-    "Brixton": {
-      "name": "Brixton",
-      "label": "Brixton"
-    },
-    "BlackhorseRoad": {
-      "name": "BlackhorseRoad",
-      "label": "Blackhorse\nRoad"
-    },
-    "FinsburyPark": {
-      "name": "FinsburyPark",
-      "label": "Finsbury\nPark"
-    },
-    "GreenPark": {
-      "name": "GreenPark",
-      "label": "Green Park"
-    },
-    "HighburyIslington": {
-      "name": "HighburyIslington",
-      "label": "Highbury &\nIslington"
-    },
-    "KingsCrossStPancras": {
-      "name": "KingsCrossStPancras",
-      "label": "King's Cross\nSt. Pancras"
-    },
-    "OxfordCircus": {
-      "name": "OxfordCircus",
-      "label": "Oxford\nCircus"
-    },
-    "Pimlico": {
-      "name": "Pimlico",
-      "label": "Pimlico"
-    },
-    "SevenSisters": {
-      "name": "SevenSisters",
-      "label": "Seven\nSisters"
-    },
-    "Stockwell": {
-      "name": "Stockwell",
-      "label": "Stockwell"
-    },
-    "TottenhamHale": {
-      "name": "TottenhamHale",
-      "label": "Tottenham\nHale"
-    },
-    "Vauxhall": {
-      "name": "Vauxhall",
-      "label": "Vauxhall"
-    },
-    "Victoria": {
-      "name": "Victoria",
-      "label": "Victoria"
-    },
-    "WalthamstowCentral": {
-      "name": "WalthamstowCentral",
-      "label": "Walthamstow\nCentral"
-    },
-    "WarrenStreet": {
-      "name": "WarrenStreet",
-      "label": "Warren\nStreet"
-    },
-    "SouthKensington": {
-      "name": "SouthKensington",
-      "label": "South\nKensington"
-    },
-    "SloaneSquare": {
-      "name": "SloaneSquare",
-      "label": "Sloane\nSquare"
-    },
-    "StJamessPark": {
-      "name": "StJamessPark",
-      "label": "St. James's\nPark"
-    },
-    "Westminster": {
-      "name": "Westminster",
-      "label": "Westminster"
-    },
-    "Embankment": {
-      "name": "Embankment",
-      "label": "Embankment"
-    },
-    "Temple": {
-      "name": "Temple",
-      "label": "Temple"
-    },
-    "Blackfriars": {
-      "name": "Blackfriars",
-      "label": "Blackfriars"
-    },
-    "MansionHouse": {
-      "name": "MansionHouse",
-      "label": "Mansion House"
-    },
-    "CannonStreet": {
-      "name": "CannonStreet",
-      "label": "Cannon Street"
-    },
-    "Monument": {
-      "name": "Monument",
-      "label": "Monument"
-    },
-    "TowerHill": {
-      "name": "TowerHill",
-      "label": "Tower\nHill"
-    },
-    "Aldgate": {
-      "name": "Aldgate",
-      "label": "Aldgate"
-    },
-    "LiverpoolStreet": {
-      "name": "LiverpoolStreet",
-      "label": "Liverpool\nStreet"
-    },
-    "Moorgate": {
-      "name": "Moorgate",
-      "label": "Moorgate"
-    },
-    "BondStreet": {
-      "name": "BondStreet",
-      "label": "Bond\nStreet"
-    },
-    "Waterloo": {
-      "name": "Waterloo",
-      "label": "Waterloo"
-    },
-    "Barbican": {
-      "name": "Barbican",
-      "label": "Barbican"
-    },
-    "Farringdon": {
-      "name": "Farringdon",
-      "label": "Farringdon"
-    }
-  },
-  "lines": [
-    {
-      "name": "Victoria",
-      "label": "Victoria",
-      "color": "#2B8DBF",
-      "shiftCoords": [0, 0],
-      "nodes": [
-        {
-          "coords": [0, -25],
-          "name": "Brixton",
-          "labelPos": "SW"
+    "stations": {
+        "马厂": {
+            "name": "马厂",
+            "label": "马厂"
         },
-        {
-          "coords": [-4, -21],
-          "name": "Stockwell",
-          "marker": "interchange",
-          "labelPos": "E"
+        "广生": {
+            "name": "广生",
+            "label": "广生"
         },
-        {
-          "coords": [-8, -17],
-          "name": "Vauxhall",
-          "marker": "interchange",
-          "labelPos": "NE"
+        "桂花坪": {
+            "name": "桂花坪",
+            "label": "桂花坪"
         },
-        {
-          "coords": [-9, -15]
+        "麓云路": {
+            "name": "麓云路",
+            "label": "麓云路"
         },
-        {
-          "coords": [-9, -8],
-          "name": "Pimlico",
-          "labelPos": "W"
+        "山塘": {
+            "name": "山塘",
+            "label": "山塘"
         },
-        {
-          "coords": [-9, 1],
-          "name": "Victoria",
-          "marker": "interchange",
-          "canonical": true,
-          "labelPos": "NW"
+        "长沙大学": {
+            "name": "长沙大学",
+            "label": "长沙大学"
         },
-        {
-          "coords": [-9, 15],
-          "name": "GreenPark",
-          "marker": "interchange",
-          "labelPos": "NE"
+        "灵官渡": {
+            "name": "灵官渡",
+            "label": "灵官渡"
         },
-        {
-          "coords": [-9, 16]
+        "螺丝塘": {
+            "name": "螺丝塘",
+            "label": "螺丝塘"
         },
-        {
-          "coords": [-8, 18]
+        "长沙火车南站": {
+            "name": "长沙火车南站",
+            "label": "长沙火车南站"
         },
-        {
-          "coords": [-6, 20]
+        "碧沙湖": {
+            "name": "碧沙湖",
+            "label": "碧沙湖"
         },
-        {
-          "coords": [-4, 22],
-          "name": "OxfordCircus",
-          "marker": "interchange",
-          "canonical": true,
-          "labelPos": "NW"
+        "阿弥岭": {
+            "name": "阿弥岭",
+            "label": "阿弥岭"
         },
-        {
-          "coords": [9, 35],
-          "name": "WarrenStreet",
-          "marker": "interchange",
-          "labelPos": "E"
+        "大托": {
+            "name": "大托",
+            "label": "大托"
         },
-        {
-          "coords": [13, 39]
+        "长沙大道": {
+            "name": "长沙大道",
+            "label": "长沙大道"
         },
-        {
-          "coords": [15, 40]
+        "光达": {
+            "name": "光达",
+            "label": "光达"
         },
-        {
-          "coords": [18, 40],
-          "name": "KingsCrossStPancras",
-          "marker": "interchange",
-          "labelPos": "N"
+        "丝茅冲": {
+            "name": "丝茅冲",
+            "label": "丝茅冲"
         },
-        {
-          "coords": [25, 40]
+        "望城坡": {
+            "name": "望城坡",
+            "label": "望城坡"
         },
-        {
-          "coords": [26, 41]
+        "橘子洲": {
+            "name": "橘子洲",
+            "label": "橘子洲"
         },
-        {
-          "coords": [26, 50],
-          "name": "HighburyIslington",
-          "marker": "interchange",
-          "labelPos": "NW"
+        "茶子山": {
+            "name": "茶子山",
+            "label": "茶子山"
         },
-        {
-          "coords": [26, 53]
+        "黄兴广场": {
+            "name": "黄兴广场",
+            "label": "黄兴广场"
         },
-        {
-          "coords": [27, 55]
+        "中南大学": {
+            "name": "中南大学",
+            "label": "中南大学"
         },
-        {
-          "coords": [31, 59],
-          "name": "FinsburyPark",
-          "marker": "interchange",
-          "labelPos": "SE"
+        "铁道学院": {
+            "name": "铁道学院",
+            "label": "铁道学院"
         },
-        {
-          "coords": [35, 63]
+        "望月湖": {
+            "name": "望月湖",
+            "label": "望月湖"
         },
-        {
-          "coords": [37, 64]
+        "汉王陵公园": {
+            "name": "汉王陵公园",
+            "label": "汉王陵公园"
         },
-        {
-          "coords": [41, 64],
-          "name": "SevenSisters",
-          "marker": "interchange",
-          "labelPos": "N"
+        "桂花公园": {
+            "name": "桂花公园",
+            "label": "桂花公园"
         },
-        {
-          "coords": [45, 64],
-          "name": "TottenhamHale",
-          "marker": "interchange",
-          "labelPos": "S"
+        "湘江新城": {
+            "name": "湘江新城",
+            "label": "湘江新城"
         },
-        {
-          "coords": [49, 64],
-          "name": "BlackhorseRoad",
-          "marker": "interchange",
-          "labelPos": "N"
+        "栗塘": {
+            "name": "栗塘",
+            "label": "栗塘"
         },
-        {
-          "coords": [55, 64],
-          "name": "WalthamstowCentral",
-          "marker": "interchange",
-          "labelPos": "E"
+        "中信广场": {
+            "name": "中信广场",
+            "label": "中信广场"
+        },
+        "杜花路": {
+            "name": "杜花路",
+            "label": "杜花路"
+        },
+        "松雅湖(南)": {
+            "name": "松雅湖(南)",
+            "label": "松雅湖(南)"
+        },
+        "省政府": {
+            "name": "省政府",
+            "label": "省政府"
+        },
+        "洋湖新城": {
+            "name": "洋湖新城",
+            "label": "洋湖新城"
+        },
+        "东塘": {
+            "name": "东塘",
+            "label": "东塘"
+        },
+        "文昌阁": {
+            "name": "文昌阁",
+            "label": "文昌阁"
+        },
+        "南湖路": {
+            "name": "南湖路",
+            "label": "南湖路"
+        },
+        "开福区政府": {
+            "name": "开福区政府",
+            "label": "开福区政府"
+        },
+        "芙蓉广场": {
+            "name": "芙蓉广场",
+            "label": "芙蓉广场"
+        },
+        "开福寺": {
+            "name": "开福寺",
+            "label": "开福寺"
+        },
+        "北辰三角洲": {
+            "name": "北辰三角洲",
+            "label": "北辰三角洲"
+        },
+        "梅溪湖东": {
+            "name": "梅溪湖东",
+            "label": "梅溪湖东"
+        },
+        "徐家冲": {
+            "name": "徐家冲",
+            "label": "徐家冲"
+        },
+        "四方坪": {
+            "name": "四方坪",
+            "label": "四方坪"
+        },
+        "沙湾公园": {
+            "name": "沙湾公园",
+            "label": "沙湾公园"
+        },
+        "洋湖湿地": {
+            "name": "洋湖湿地",
+            "label": "洋湖湿地"
+        },
+        "圭塘": {
+            "name": "圭塘",
+            "label": "圭塘"
+        },
+        "尚双塘": {
+            "name": "尚双塘",
+            "label": "尚双塘"
+        },
+        "人民东路": {
+            "name": "人民东路",
+            "label": "人民东路"
+        },
+        "万家丽广场": {
+            "name": "万家丽广场",
+            "label": "万家丽广场"
+        },
+        "罐子岭": {
+            "name": "罐子岭",
+            "label": "罐子岭"
+        },
+        "赤岗岭": {
+            "name": "赤岗岭",
+            "label": "赤岗岭"
+        },
+        "树木岭": {
+            "name": "树木岭",
+            "label": "树木岭"
+        },
+        "砂子塘": {
+            "name": "砂子塘",
+            "label": "砂子塘"
+        },
+        "烈士公园东": {
+            "name": "烈士公园东",
+            "label": "烈士公园东"
+        },
+        "湖南大学": {
+            "name": "湖南大学",
+            "label": "湖南大学"
+        },
+        "迎宾路口": {
+            "name": "迎宾路口",
+            "label": "迎宾路口"
+        },
+        "六沟垅": {
+            "name": "六沟垅",
+            "label": "六沟垅"
+        },
+        "湖南师大": {
+            "name": "湖南师大",
+            "label": "湖南师大"
+        },
+        "朝阳村": {
+            "name": "朝阳村",
+            "label": "朝阳村"
+        },
+        "西湖公园": {
+            "name": "西湖公园",
+            "label": "西湖公园"
+        },
+        "阜埠河": {
+            "name": "阜埠河",
+            "label": "阜埠河"
+        },
+        "雅雀湖": {
+            "name": "雅雀湖",
+            "label": "雅雀湖"
+        },
+        "锦泰广场": {
+            "name": "锦泰广场",
+            "label": "锦泰广场"
+        },
+        "翔龙": {
+            "name": "翔龙",
+            "label": "翔龙"
+        },
+        "星沙": {
+            "name": "星沙",
+            "label": "星沙"
+        },
+        "南门口": {
+            "name": "南门口",
+            "label": "南门口"
+        },
+        "星沙文体中心": {
+            "name": "星沙文体中心",
+            "label": "星沙文体中心"
+        },
+        "文化艺术中心": {
+            "name": "文化艺术中心",
+            "label": "文化艺术中心"
+        },
+        "梅溪湖西": {
+            "name": "梅溪湖西",
+            "label": "梅溪湖西"
+        },
+        "湘江中路": {
+            "name": "湘江中路",
+            "label": "湘江中路"
+        },
+        "月湖公园北": {
+            "name": "月湖公园北",
+            "label": "月湖公园北"
+        },
+        "月亮岛西": {
+            "name": "月亮岛西",
+            "label": "月亮岛西"
+        },
+        "阳光": {
+            "name": "阳光",
+            "label": "阳光"
+        },
+        "观沙岭": {
+            "name": "观沙岭",
+            "label": "观沙岭"
+        },
+        "长沙火车站": {
+            "name": "长沙火车站",
+            "label": "长沙火车站"
+        },
+        "溁湾镇": {
+            "name": "溁湾镇",
+            "label": "溁湾镇"
+        },
+        "侯家塘": {
+            "name": "侯家塘",
+            "label": "侯家塘"
+        },
+        "黄土岭": {
+            "name": "黄土岭",
+            "label": "黄土岭"
+        },
+        "培元桥": {
+            "name": "培元桥",
+            "label": "培元桥"
+        },
+        "五一广场": {
+            "name": "五一广场",
+            "label": "五一广场"
+        },
+        "金星路": {
+            "name": "金星路",
+            "label": "金星路"
+        },
+        "袁家岭": {
+            "name": "袁家岭",
+            "label": "袁家岭"
+        },
+        "福员大桥西": {
+            "name": "福员大桥西",
+            "label": "福员大桥西"
+        },
+        "友谊路": {
+            "name": "友谊路",
+            "label": "友谊路"
         }
-      ]
     },
-    {
-      "name": "Circle",
-      "label": "Circle",
-      "color": "#FFD600",
-      "shiftCoords": [0, 0],
-      "nodes": [
+    "lines": [
         {
-          "coords": [-25, 1],
-          "name": "SouthKensington",
-          "marker": "interchange",
-          "labelPos": "S"
+            "name": "1号线",
+            "label": "1号线",
+            "color": "\t#DC143C",
+            "shiftCoords": [
+                0,
+                0
+            ],
+            "nodes": [
+                {
+                    "coords": [
+                        0,
+                        36
+                    ],
+                    "name": "开福区政府",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        30
+                    ],
+                    "name": "马厂",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        24
+                    ],
+                    "name": "北辰三角洲",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        18
+                    ],
+                    "name": "开福寺",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        12
+                    ],
+                    "name": "文昌阁",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        6
+                    ],
+                    "name": "培元桥",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        0
+                    ],
+                    "name": "五一广场",
+                    "labelPos": "SW",
+                    "marker": "interchange",
+                    "canonical": true
+                },
+                {
+                    "coords": [
+                        0,
+                        -6
+                    ],
+                    "name": "黄兴广场",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        -12
+                    ],
+                    "name": "南门口",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        -18
+                    ],
+                    "name": "侯家塘",
+                    "labelPos": "W",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        -24
+                    ],
+                    "name": "南湖路",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        -30
+                    ],
+                    "name": "黄土岭",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        -36
+                    ],
+                    "name": "徐家冲",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        -42
+                    ],
+                    "name": "铁道学院",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        -48
+                    ],
+                    "name": "友谊路",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        -54
+                    ],
+                    "name": "省政府",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        -60
+                    ],
+                    "name": "桂花坪",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        -66
+                    ],
+                    "name": "大托",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        -72
+                    ],
+                    "name": "中信广场",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        -78
+                    ],
+                    "name": "尚双塘",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                }
+            ]
         },
         {
-          "coords": [-17, 1],
-          "name": "SloaneSquare",
-          "labelPos": "S"
+            "name": "2号线",
+            "label": "2号线",
+            "color": "#00CCFF",
+            "shiftCoords": [
+                0,
+                0
+            ],
+            "nodes": [
+                {
+                    "coords": [
+                        -78,
+                        -25
+                    ]
+                },
+                {
+                    "coords": [
+                        -78,
+                        -24
+                    ],
+                    "name": "梅溪湖西",
+                    "labelPos": "W",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -77,
+                        -22
+                    ]
+                },
+                {
+                    "coords": [
+                        -73,
+                        -18
+                    ],
+                    "name": "麓云路",
+                    "labelPos": "W",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -67,
+                        -12
+                    ],
+                    "name": "文化艺术中心",
+                    "labelPos": "W",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -61,
+                        -6
+                    ],
+                    "name": "梅溪湖东",
+                    "labelPos": "W",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -56,
+                        -1
+                    ]
+                },
+                {
+                    "coords": [
+                        -54,
+                        0
+                    ],
+                    "name": "望城坡",
+                    "labelPos": "N",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -45,
+                        0
+                    ],
+                    "name": "金星路",
+                    "labelPos": "N",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -36,
+                        0
+                    ],
+                    "name": "西湖公园",
+                    "labelPos": "N",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -27,
+                        0
+                    ],
+                    "name": "溁湾镇",
+                    "labelPos": "SW",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -18,
+                        0
+                    ],
+                    "name": "橘子洲",
+                    "labelPos": "N",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -9,
+                        0
+                    ],
+                    "name": "湘江中路",
+                    "labelPos": "N",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        0
+                    ],
+                    "name": "五一广场",
+                    "labelPos": "SW",
+                    "marker": "interchange",
+                    "canonical": true
+                },
+                {
+                    "coords": [
+                        8,
+                        0
+                    ],
+                    "name": "芙蓉广场",
+                    "labelPos": "N",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        16,
+                        0
+                    ],
+                    "name": "迎宾路口",
+                    "labelPos": "N",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        24,
+                        0
+                    ],
+                    "name": "袁家岭",
+                    "labelPos": "N",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        32,
+                        0
+                    ],
+                    "name": "长沙火车站",
+                    "labelPos": "SW",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        40,
+                        0
+                    ],
+                    "name": "锦泰广场",
+                    "labelPos": "S",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        48,
+                        0
+                    ],
+                    "name": "万家丽广场",
+                    "labelPos": "NW",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        56,
+                        0
+                    ],
+                    "name": "人民东路",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        57,
+                        -1
+                    ]
+                },
+                {
+                    "coords": [
+                        57,
+                        -15
+                    ],
+                    "name": "长沙大道",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        57,
+                        -30
+                    ],
+                    "name": "沙湾公园",
+                    "labelPos": "SW",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        57,
+                        -50
+                    ]
+                },
+                {
+                    "coords": [
+                        58,
+                        -51
+                    ],
+                    "name": "杜花路",
+                    "labelPos": "S",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        70,
+                        -51
+                    ],
+                    "name": "长沙火车南站",
+                    "labelPos": "S",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        82,
+                        -51
+                    ],
+                    "name": "光达",
+                    "labelPos": "S",
+                    "marker": "interchange"
+                }
+            ]
         },
         {
-          "coords": [-9, 1],
-          "name": "Victoria",
-          "marker": "interchange",
-          "labelPos": "NW"
+            "name": "3号线",
+            "label": "3号线",
+            "color": "#94E61A",
+            "shiftCoords": [
+                0,
+                0
+            ],
+            "nodes": [
+                {
+                    "coords": [
+                        -41,
+                        -51
+                    ]
+                },
+                {
+                    "coords": [
+                        -41,
+                        -50
+                    ],
+                    "name": "山塘",
+                    "labelPos": "W",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -40,
+                        -48
+                    ]
+                },
+                {
+                    "coords": [
+                        -37,
+                        -45
+                    ]
+                },
+                {
+                    "coords": [
+                        -36,
+                        -43
+                    ],
+                    "name": "洋湖湿地",
+                    "labelPos": "W",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -36,
+                        -36
+                    ],
+                    "name": "洋湖新城",
+                    "labelPos": "W",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -36,
+                        -29
+                    ],
+                    "name": "阳光",
+                    "labelPos": "W",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -36,
+                        -24
+                    ],
+                    "name": "中南大学",
+                    "labelPos": "W",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -34,
+                        -23
+                    ]
+                },
+                {
+                    "coords": [
+                        -27,
+                        -23
+                    ],
+                    "name": "阜埠河",
+                    "labelPos": "SW",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -4,
+                        -23
+                    ],
+                    "name": "灵官渡",
+                    "labelPos": "NW",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -3,
+                        -22
+                    ]
+                },
+                {
+                    "coords": [
+                        -2,
+                        -20
+                    ]
+                },
+                {
+                    "coords": [
+                        0,
+                        -18
+                    ],
+                    "name": "侯家塘",
+                    "labelPos": "W",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        2,
+                        -17
+                    ]
+                },
+                {
+                    "coords": [
+                        12,
+                        -17
+                    ],
+                    "name": "东塘",
+                    "labelPos": "N",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        21,
+                        -17
+                    ],
+                    "name": "桂花公园",
+                    "labelPos": "N",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        31,
+                        -17
+                    ]
+                },
+                {
+                    "coords": [
+                        32,
+                        -16
+                    ],
+                    "name": "阿弥岭",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        32,
+                        -8
+                    ],
+                    "name": "朝阳村",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        32,
+                        0
+                    ],
+                    "name": "长沙火车站",
+                    "labelPos": "SW",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        32,
+                        8
+                    ],
+                    "name": "烈士公园东",
+                    "labelPos": "W",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        32,
+                        13
+                    ],
+                    "name": "丝茅冲",
+                    "labelPos": "W",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        32,
+                        24
+                    ],
+                    "name": "四方坪",
+                    "labelPos": "W",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        33,
+                        26
+                    ]
+                },
+                {
+                    "coords": [
+                        36,
+                        29
+                    ],
+                    "name": "雅雀湖",
+                    "labelPos": "NW",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        42,
+                        35
+                    ],
+                    "name": "长沙大学",
+                    "labelPos": "NW",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        44,
+                        36
+                    ]
+                },
+                {
+                    "coords": [
+                        48,
+                        36
+                    ],
+                    "name": "月湖公园北",
+                    "labelPos": "NE",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        58,
+                        36
+                    ],
+                    "name": "翔龙",
+                    "labelPos": "S",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        66,
+                        36
+                    ],
+                    "name": "星沙",
+                    "labelPos": "N",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        74,
+                        36
+                    ],
+                    "name": "松雅湖(南)",
+                    "labelPos": "S",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        82,
+                        36
+                    ],
+                    "name": "星沙文体中心",
+                    "labelPos": "N",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        90,
+                        36
+                    ],
+                    "name": "螺丝塘",
+                    "labelPos": "S",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        98,
+                        36
+                    ],
+                    "name": "广生",
+                    "labelPos": "N",
+                    "marker": "interchange"
+                }
+            ]
         },
         {
-          "coords": [-3, 1],
-          "name": "StJamessPark",
-          "canonical": true,
-          "labelPos": "N"
-        },
-        {
-          "coords": [5, 1],
-          "name": "Westminster",
-          "marker": "interchange",
-          "labelPos": "SW"
-        },
-        {
-          "coords": [11, 1],
-          "name": "Embankment",
-          "marker": "interchange",
-          "labelPos": "SE"
-        },
-        {
-          "coords": [17, 1],
-          "name": "Temple",
-          "canonical": true,
-          "labelPos": "N"
-        },
-        {
-          "coords": [23, 1]
-        },
-        {
-          "coords": [25, 2]
-        },
-        {
-          "coords": [28, 5],
-          "name": "Blackfriars",
-          "canonical": true,
-          "labelPos": "NW"
-        },
-        {
-          "coords": [32, 9],
-          "name": "MansionHouse",
-          "canonical": true,
-          "labelPos": "NW"
-        },
-        {
-          "coords": [36, 13],
-          "name": "CannonStreet",
-          "marker": "interchange",
-          "canonical": true,
-          "labelPos": "NW"
-        },
-        {
-          "coords": [38, 15]
-        },
-        {
-          "coords": [40, 16]
-        },
-        {
-          "coords": [45, 16],
-          "name": "Monument",
-          "marker": "interchange",
-          "labelPos": "S"
-        },
-        {
-          "coords": [53, 16],
-          "name": "TowerHill",
-          "marker": "interchange",
-          "labelPos": "S"
-        },
-        {
-          "coords": [55, 16]
-        },
-        {
-          "coords": [56, 17]
-        },
-        {
-          "coords": [56, 20],
-          "name": "Aldgate",
-          "labelPos": "W"
-        },
-        {
-          "coords": [56, 26]
-        },
-        {
-          "coords": [55, 27]
-        },
-        {
-          "coords": [50, 27],
-          "name": "LiverpoolStreet",
-          "marker": "interchange",
-          "canonical": true,
-          "labelPos": "N"
-        },
-        {
-          "coords": [44, 27],
-          "name": "Moorgate",
-          "marker": "interchange",
-          "labelPos": "SE"
-        },
-        {
-          "coords": [43, 27]
-        },
-        {
-          "coords": [41, 28]
-        },
-        {
-          "coords": [38, 31],
-          "name": "Barbican",
-          "labelPos": "SW"
-        },
-        {
-          "coords": [33, 36],
-          "name": "Farringdon",
-          "labelPos": "SW"
+            "name": "4号线",
+            "label": "4号线",
+            "color": "#6911EE",
+            "shiftCoords": [
+                0,
+                0
+            ],
+            "nodes": [
+                {
+                    "coords": [
+                        -49,
+                        60
+                    ]
+                },
+                {
+                    "coords": [
+                        -48,
+                        60
+                    ],
+                    "name": "罐子岭",
+                    "labelPos": "W",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -46,
+                        59
+                    ]
+                },
+                {
+                    "coords": [
+                        -42,
+                        55
+                    ],
+                    "name": "月亮岛西",
+                    "labelPos": "NE",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -37,
+                        50
+                    ],
+                    "name": "湘江新城",
+                    "labelPos": "NE",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -32,
+                        45
+                    ],
+                    "name": "汉王陵公园",
+                    "labelPos": "NE",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -28,
+                        41
+                    ]
+                },
+                {
+                    "coords": [
+                        -27,
+                        39
+                    ],
+                    "name": "福员大桥西",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -27,
+                        36
+                    ],
+                    "name": "茶子山",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -27,
+                        27
+                    ],
+                    "name": "观沙岭",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -27,
+                        18
+                    ],
+                    "name": "六沟垅",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -27,
+                        9
+                    ],
+                    "name": "望月湖",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -27,
+                        0
+                    ],
+                    "name": "溁湾镇",
+                    "labelPos": "SW",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -27,
+                        -8
+                    ],
+                    "name": "湖南师大",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -27,
+                        -15
+                    ],
+                    "name": "湖南大学",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -27,
+                        -23
+                    ],
+                    "name": "阜埠河",
+                    "labelPos": "SW",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -26,
+                        -25
+                    ],
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -22,
+                        -29
+                    ],
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        -20,
+                        -30
+                    ],
+                    "name": "碧沙湖",
+                    "labelPos": "S",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        0,
+                        -30
+                    ],
+                    "name": "黄土岭",
+                    "labelPos": "SW",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        12,
+                        -30
+                    ],
+                    "name": "砂子塘",
+                    "labelPos": "S",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        21,
+                        -30
+                    ],
+                    "name": "赤岗岭",
+                    "labelPos": "S",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        65,
+                        -31
+                    ],
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        30,
+                        -30
+                    ],
+                    "name": "树木岭",
+                    "labelPos": "S",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        41,
+                        -30
+                    ],
+                    "name": "圭塘",
+                    "labelPos": "NW",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        57,
+                        -30
+                    ],
+                    "name": "沙湾公园",
+                    "labelPos": "SW",
+                    "marker": "interchange"
+                },
+                {
+                    "coords": [
+                        63,
+                        -30
+                    ],
+                    "name": "栗塘",
+                    "labelPos": "E",
+                    "marker": "interchange"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "name": "District",
-      "label": "District",
-      "color": "#0C6826",
-      "shiftCoords": [0, 0],
-      "shiftNormal": 1,
-      "nodes": [
-        {
-          "coords": [-25, 1],
-          "name": "SouthKensington",
-          "marker": "interchange",
-          "canonical": true,
-          "labelPos": "S"
-        },
-        {
-          "coords": [-17, 1],
-          "name": "SloaneSquare",
-          "canonical": true,
-          "labelPos": "S"
-        },
-        {
-          "coords": [-9, 1],
-          "name": "Victoria",
-          "marker": "interchange",
-          "labelPos": "NW"
-        },
-        {
-          "coords": [-3, 1],
-          "name": "StJamessPark",
-          "labelPos": "N"
-        },
-        {
-          "coords": [5, 1],
-          "name": "Westminster",
-          "marker": "interchange",
-          "canonical": true,
-          "labelPos": "SW"
-        },
-        {
-          "coords": [11, 1],
-          "name": "Embankment",
-          "marker": "interchange",
-          "canonical": true,
-          "labelPos": "SE"
-        },
-        {
-          "coords": [17, 1],
-          "name": "Temple",
-          "labelPos": "N"
-        },
-        {
-          "coords": [23, 1]
-        },
-        {
-          "coords": [25, 2]
-        },
-        {
-          "coords": [28, 5],
-          "name": "Blackfriars",
-          "labelPos": "NW"
-        },
-        {
-          "coords": [32, 9],
-          "name": "MansionHouse",
-          "labelPos": "NW"
-        },
-        {
-          "coords": [36, 13],
-          "name": "CannonStreet",
-          "marker": "interchange",
-          "labelPos": "NW"
-        },
-        {
-          "coords": [38, 15]
-        },
-        {
-          "coords": [40, 16]
-        },
-        {
-          "coords": [45, 16],
-          "name": "Monument",
-          "marker": "interchange",
-          "canonical": true,
-          "labelPos": "S"
-        },
-        {
-          "coords": [53, 16],
-          "name": "TowerHill",
-          "marker": "interchange",
-          "canonical": true,
-          "labelPos": "S"
-        }
-      ]
-    },
-    {
-      "name": "Metropolitan",
-      "label": "Metropolitan",
-      "color": "#89014C",
-      "shiftCoords": [0, 0],
-      "shiftNormal": -1,
-      "nodes": [
-        {
-          "coords": [56, 20],
-          "name": "Aldgate",
-          "canonical": true,
-          "labelPos": "W"
-        },
-        {
-          "coords": [56, 26]
-        },
-        {
-          "coords": [55, 27]
-        },
-        {
-          "coords": [50, 27],
-          "name": "LiverpoolStreet",
-          "marker": "interchange",
-          "labelPos": "N"
-        },
-        {
-          "coords": [44, 27],
-          "name": "Moorgate",
-          "marker": "interchange",
-          "canonical": true,
-          "labelPos": "SE"
-        },
-        {
-          "coords": [43, 27]
-        },
-        {
-          "coords": [41, 28]
-        },
-        {
-          "coords": [38, 31],
-          "name": "Barbican",
-          "labelPos": "SW"
-        },
-        {
-          "coords": [33, 36],
-          "name": "Farringdon",
-          "labelPos": "SW"
-        }
-      ]
-    },
-    {
-      "name": "Jubilee",
-      "label": "Jubilee",
-      "color": "#85898A",
-      "shiftCoords": [0, 0],
-      "nodes": [
-        {
-          "coords": [-12, 22],
-          "name": "BondStreet",
-          "marker": "interchange",
-          "labelPos": "NW"
-        },
-        {
-          "coords": [-12, 19]
-        },
-        {
-          "coords": [-11, 17]
-        },
-        {
-          "coords": [-9, 15],
-          "name": "GreenPark",
-          "marker": "interchange",
-          "labelPos": "NE"
-        },
-        {
-          "coords": [5, 1],
-          "name": "Westminster",
-          "marker": "interchange",
-          "labelPos": "SW"
-        },
-        {
-          "coords": [9, -3]
-        },
-        {
-          "coords": [10, -5]
-        },
-        {
-          "coords": [10, -9],
-          "name": "Waterloo",
-          "marker": "interchange",
-          "labelPos": "W"
-        }
-      ]
-    },
-    {
-      "name": "Central",
-      "label": "Central",
-      "color": "#DC241F",
-      "shiftCoords": [0, 0],
-      "nodes": [
-        {
-          "coords": [-12, 22],
-          "name": "BondStreet",
-          "marker": "interchange",
-          "labelPos": "NW"
-        },
-        {
-          "coords": [-4, 22],
-          "name": "OxfordCircus",
-          "marker": "interchange",
-          "labelPos": "NW"
-        }
-      ]
-    }
-  ]
+    ]
 }

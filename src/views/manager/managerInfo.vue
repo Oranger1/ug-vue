@@ -75,13 +75,13 @@
             </div>
           </el-main>
         </el-container>
-        <managerAdd ref="managerAddRef" @getData="getData"></managerAdd>
+        <managerAdd ref="managerAddRef" @getData="getData" userType="manager"></managerAdd>
     </div>
 </template>
 
 <script>
-import managerAdd from './managerAdd';
-import { pageManagers,delManager } from '../../services/userInfo/userinfo';
+import managerAdd from '@/components/add/addComponents.vue';
+import { pageManagers,delManager } from '../../services/manager/managerService';
 var that
 export default {
     data () {

@@ -14,15 +14,6 @@ export default {
           icon:'el-icon-user-solid',
         },
         component: () => import('../../views/manager/managerInfo.vue')
-      },
-      {
-        path: "/userInfo/two",
-        name: "userInfo-two",
-        mate:{
-          title:'地铁站管理',
-          icon:'el-icon-star-on',
-        },
-        component: () => import('../../views/station/stationInfo.vue')
       }
     ],
 }
