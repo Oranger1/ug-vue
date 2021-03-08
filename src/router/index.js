@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 // import Home from "../views/Home.vue";
 import home from "./modules/manager"
+import station from './modules/station'
 
 Vue.use(VueRouter);
 
@@ -13,7 +14,7 @@ const routes = [
   },
   {
     path: '/',
-    redirect:'home' // 默认跳登录页面  可以直接改成home
+    redirect:'login' // 默认跳登录页面  可以直接改成home
   },
   {
     path: '/login',
@@ -21,6 +22,7 @@ const routes = [
     component: () => import('../views/login.vue')
   },
   home,
+  station
   // {
   //   path: '/user-index',
   //   name: 'user-index',
