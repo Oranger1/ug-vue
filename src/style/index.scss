@@ -1,0 +1,31 @@
+.v-header{
+  padding: 0;
+  .header-el-row{
+    box-shadow: 2px 2px 5px rgb(38 46 63 / 12%);
+  }
+}
+.v-main-contant{
+  background-color: #eff2f5;
+  .v-breadcrumb{
+    background-color: #fff;
+  }
+  .el-main{
+    margin: 20px;
+    padding: 0;
+    padding-top: 20px;
+    background-color: #fff;
+  }
+}
+
+.v-form{
+  text-align: left;
+  .el-form-item__label{
+    width: 150px;
+  }
+  .el-form-item__content{
+    text-align: left;
+    .v-form--item{
+      width: 300px;
+    }
+  }
+}

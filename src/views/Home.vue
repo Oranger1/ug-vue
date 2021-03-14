@@ -1,7 +1,7 @@
 <template>
   <!-- <div class="home"> -->
     <el-container class="container-s">
-      <el-header class="header">
+      <el-header class="header v-header">
         <el-row class="header-el-row">
           <el-col class="header-el-col" :span="1">
             <div class="btnBox" @click="menuChange">
@@ -30,7 +30,7 @@
       </el-header>
       
       <el-container>
-        <el-aside :style="{width: isCollapse ? '':'300px'}" ref="asideRef" class="customMenu">
+        <el-aside :style="{width: isCollapse ? '':'200px'}" ref="asideRef" class="customMenu">
           <el-menu
           background-color="#545c64"
           text-color="#fff"
@@ -58,8 +58,8 @@
           </el-menu>
 
         </el-aside>
-        <el-container class="mb">
-          <el-header class="el-breadcrumb__inner" style="height:50px;">
+        <el-container class="mb v-main-contant">
+          <el-header class="el-breadcrumb__inner v-breadcrumb" style="height:50px;">
             <el-breadcrumb v-for="(item,i) in routerTitleList" :key="i" class="mb-item" separator="/">
               <el-breadcrumb-item class="el-breadcrumb__inner" :to="{ path: item.path }">
                   <div @click="menuLineHeight(item)" :class="{activeTitlt:$route.fullPath == item.path ? true :''}" class="mb-title">
@@ -71,7 +71,7 @@
               </el-breadcrumb-item>
             </el-breadcrumb>
           </el-header>
-          <el-main style="padding:10px 0 0 0;">
+          <el-main>
             <router-view></router-view>
           </el-main>
         </el-container>
@@ -187,7 +187,7 @@ export default {
 <style lang="scss" scope>
   .is-active{
     // width: calc(100% + 2px);
-    background:#2769dc!important;
+    background:#409EFF!important;
   }
   .container-s{
     height: 100vh;
@@ -197,7 +197,7 @@ export default {
   }
   .el-menu-vertical-demo:not(.el-menu--collapse) {
     text-align: left;
-    width: 290px;
+    width: 200px;
   }
   .header{
     // background: var(--foo, #000);
@@ -275,10 +275,10 @@ export default {
       }
     }
     .mb-item:hover .mb-title{
-      color: #2769dc ;
+      color: #409EFF ;
     }
     .activeTitlt{
-      color: #2769dc ;
+      color: #409EFF ;
     }
   }
 </style>
