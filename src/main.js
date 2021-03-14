@@ -7,7 +7,7 @@ Vue.config.productionTip = false;
 
 // axios
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:5754"
+axios.defaults.baseURL = "http://192.168.0.142:5754"
 Vue.prototype.$axios = axios;
 // 饿了么UI
 import ElementUI from 'element-ui';
@@ -18,6 +18,8 @@ import SlideVerify from 'vue-monoplasty-slide-verify';
 Vue.use(SlideVerify);
 import echarts from 'echarts'
 Vue.prototype.$echarts = echarts
+
+import './style/index.scss'
 
 import {get, post, put} from './http/http'
 Vue.prototype.$get=get;
