@@ -4,15 +4,15 @@
     <div class="from-wrap">
       <div class="tips">请先按下站点后面的按钮，然后在地铁图上选择站点</div>
       <el-form ref="form" class="v-form" size="small" label-position="top" :model="form">
-        <el-form-item label="起始站" prop="start" :rules="[{ required: true, message: '必填'}]">
+        <el-form-item label="起始站" prop="beginStation" :rules="[{ required: true, message: '必填'}]">
           <div style="display:flex">
-            <el-input v-model="form.start" :disabled="true" placeholder="请选择起始站" />
+            <el-input v-model="form.beginStation" :disabled="true" placeholder="请选择起始站" />
             <el-button type="primary" size="small" style="margin-left:4px" @click="curPos = 1">选择起始站</el-button>
           </div>
         </el-form-item>
-        <el-form-item label="结束站" prop="end" :rules="[{ required: true, message: '必填'}]">
+        <el-form-item label="结束站" prop="endStation" :rules="[{ required: true, message: '必填'}]">
           <div style="display:flex">
-            <el-input v-model="form.end" :disabled="true" placeholder="请选择结束站" />
+            <el-input v-model="form.endStation" :disabled="true" placeholder="请选择结束站" />
             <el-button type="primary" size="small" style="margin-left:4px" @click="curPos = 2">选择结束站</el-button>
           </div>
         </el-form-item>
@@ -30,15 +30,15 @@ import * as d3 from 'd3'
 import QRCode from 'qrcode'
 import * as tubeMap from '@/js/map/d3-tube-map.js'
 import londonTubeJson from './london-tube.json'
-import { queryMapObj } from '@/services/station/stationService';
+import { queryMapObj,getPrice } from '@/services/station/stationService';
 
 export default {
   data () {
     return {
       curPos: 0,
       form: {
-        start: '',
-        end: ''
+        beginStation: '',
+        endStation: ''
       },
       file: null,
       container: null
@@ -51,11 +51,11 @@ export default {
     var that = this
     var map = tubeMap.tubeMap().width(width).height(height).margin({ top: 20, right: 20, bottom: 40, left: 100 }).on("click", function (name) {
       if (that.curPos === 1) {
-        that.form.start = name
+        that.form.beginStation = name
         that.curPos = 0
       }
       if (that.curPos === 2) {
-        that.form.end = name
+        that.form.endStation = name
         that.curPos = 0
       }
     });
@@ -88,6 +88,10 @@ export default {
       }
     },
     submitForm() {
+      getPrice(this.form).then(r =>{
+        console.log(r);
+
+      })
       this.makeQRCode('jingyan')
       this.$refs.form.validate((valid) => {
         if (valid) {

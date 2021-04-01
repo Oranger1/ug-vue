@@ -39,3 +39,13 @@ export function queryMapObj () { //
           method: 'get'
       })
 }
+
+export function getPrice(params) {
+  console.log('getPrice',params);
+  return http({
+    url: '/station/getPrice',
+    method: 'get',
+    params
+  })
+
+}
