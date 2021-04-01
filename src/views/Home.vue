@@ -178,9 +178,7 @@ export default {
         }
       }
   },
-  components: {
-      userInfo
-  }
+ 
 };
 </script>
 

@@ -35,8 +35,8 @@ axios.interceptors.response.use(
             //     debugger
             // }
             //存放token
-            if(response.data){
-                sessionStorage.setItem('stlToken',response.data);
+            if(response.data.token){
+                sessionStorage.setItem('stlToken',response.data.token);
             }
         }
         
