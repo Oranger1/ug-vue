@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import { toPay } from '@/services/station/stationService';
+
 export default {
   data () {
     return {
@@ -22,7 +24,9 @@ export default {
     subPay() {
       var query = this.$route.query
       if (query.code) {
-        alert(query.code)
+        toPay({ publicKey: query.code }).then((res) => {
+          this.$message.success('支付成功')
+        })
       }
     }
   }

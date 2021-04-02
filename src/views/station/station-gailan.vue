@@ -20,7 +20,16 @@
           <el-button type="primary" @click="submitForm">提交</el-button>
         </el-form-item>
       </el-form>
-      <canvas id="canvas" ref ="canva"></canvas>
+      <div>
+        <div v-if="priceModel.publicKey" style="text-align: left; margin-left:10px; margin-bottom:10px">
+          价格： {{ priceModel.price }}元
+        </div>
+        <div>
+          <canvas id="canvas" ref ="canva" width="292" height="292"></canvas>
+          <div v-if="priceModel.publicKey && priceModel.status == 0" class="tips" style="margin-left:10px;">请扫码支付</div>
+          <div v-if="priceModel.status == 1" class="tips" style="margin-left:10px;">支付成功， 乘车码: {{ priceModel.code }}</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -30,7 +39,7 @@ import * as d3 from 'd3'
 import QRCode from 'qrcode'
 import * as tubeMap from '@/js/map/d3-tube-map.js'
 import londonTubeJson from './london-tube.json'
-import { queryMapObj,getPrice } from '@/services/station/stationService';
+import { queryMapObj,getPrice, queryPayStatus } from '@/services/station/stationService';
 
 export default {
   data () {
@@ -41,7 +50,9 @@ export default {
         endStation: ''
       },
       file: null,
-      container: null
+      container: null,
+      interval: null,
+      priceModel: { price: '', publicKey: '', status: 0, code: '' }
     }
   },
   mounted() {
@@ -88,23 +99,36 @@ export default {
       }
     },
     submitForm() {
-      getPrice(this.form).then(r =>{
-        console.log(r);
-
-      })
-      this.makeQRCode('jingyan')
       this.$refs.form.validate((valid) => {
         if (valid) {
-          console.log(this.form)
+          getPrice(this.form).then(r =>{
+            this.priceModel = Object.assign(r, { status: 0, code: ''})
+            this.makeQRCode(r.publicKey)
+          })
         }
       });
     },
     makeQRCode(code) {
       let canvas = this.$refs.canva;
-      QRCode.toCanvas(canvas, `http://192.168.0.188:8080/pay?code=${code}`, function (error) {
+      let that = this
+
+      QRCode.toCanvas(canvas, `${window.location.origin}/pay?code=${code}`, function (error) {
         if (error) console.error(error)
-        console.log('success!');
+        that.startTimeout()
       })
+    },
+    startTimeout () {
+      const that = this
+      clearInterval(that.interval)
+      that.interval = setInterval(() => {
+        queryPayStatus({ publicKey: that.priceModel.publicKey }).then((res) => {
+          if (res) {
+            that.priceModel.status = 1
+            that.priceModel.code = res
+            clearInterval(that.interval)
+          }
+        })
+      }, 20000);
     }
   }
 }
