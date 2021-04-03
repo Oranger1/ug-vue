@@ -40,12 +40,12 @@ axios.interceptors.response.use(
             }
         }
         
-        Notification({
-            message: response.data.message ? response.data.message : '操作成功',
-            type: response.data.error ? 'error' : 'success',
-            duration: 3 * 1000,
-            position: 'top-right'
-        });
+        // Notification({
+        //     message: response.data.message ? response.data.message : '操作成功',
+        //     type: response.data.error ? 'error' : 'success',
+        //     duration: 3 * 1000,
+        //     position: 'top-right'
+        // });
         return response.data;
     },
     error => {
@@ -56,7 +56,6 @@ axios.interceptors.response.use(
 function responseError(error) {
     let message = null;
     let title = null;
-
     if (!error.response) {
         message = error.message
     } else {

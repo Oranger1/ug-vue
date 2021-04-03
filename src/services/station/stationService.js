@@ -11,12 +11,10 @@ export function pageStation(params) { //
 
     
 export function addStation(params) { //
-  console.log('add',params);
-    return post('/station/add',params)
+   return post('/station/add',params)
 }
 
 export function updateStation (params) { //
-  console.log('update',params);
      return http({
           url: '/station/update',
           method: 'put',
@@ -25,12 +23,11 @@ export function updateStation (params) { //
 }
 
 export function queryLines (params) { //
-  console.log('queryLines',params);
      return http({
-          url: '/line/query',
-          method: 'get',
-          data:params
-      })
+        url: '/line/query',
+        method: 'get',
+        data:params
+    })
 }
 
 export function queryMapObj () { //
@@ -41,11 +38,28 @@ export function queryMapObj () { //
 }
 
 export function getPrice(params) {
-  console.log('getPrice',params);
   return http({
     url: '/station/getPrice',
     method: 'get',
     params
   })
+}
 
+
+export function toPay(params) {
+  console.log(params)
+  return http({
+    url: '/apily',
+    method: 'get',
+    params
+  })
+}
+
+export function queryPayStatus(params) {
+  console.log(params)
+  return http({
+    url: '/queryIsApily',
+    method: 'get',
+    params
+  })
 }
