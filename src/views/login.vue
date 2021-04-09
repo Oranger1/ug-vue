@@ -18,15 +18,19 @@
                         </template>
                     </el-input>
                 </el-form-item>
-                <el-form-item>
+                <!-- <el-form-item>
                     <div @click="register" style="float:left;color:#fff;font-weight:500;font-size:18px;cursor: pointer;">立即注册</div>
                     <div @click="forget" style="float:right;color:#fff;font-weight:500;font-size:18px;cursor: pointer;">忘记密码</div>
-                </el-form-item>
+                </el-form-item> -->
                 <el-form-item>
                     <div id="draw-border">
                         <button :disabled="loading" class="button" type="button" @click="login">
                             <i v-show="loading" class="el-icon-loading"></i>
-                            {{type == 0 ? '登录' : '注册'}}
+                            登陆
+                        </button>
+                        <button :disabled="loading" class="button" type="button" @click="login">
+                            <i v-show="loading" class="el-icon-loading"></i>
+                            游客登陆
                         </button>
                     </div>
                 </el-form-item>
@@ -91,7 +95,7 @@
 <script>
 // import $ from 'jquery';
 // import { mapState,mapActions,mapMutations } from 'vuex'
-import { login, getdata } from '../services/admin/admin'
+import { login, getdata,touristLogin } from '../services/admin/admin'
 export default {
     name: "login",
     data() {
@@ -140,9 +144,9 @@ export default {
         // this.$store.dispatch('home/ADD', '先调actions')
         // this.add()
         // this.ADD('先调actions')
-        if (localStorage.getItem('stlogin')) { // 浏览器是否有缓存 有则不需登录
-            this.$router.push('home')
-        }
+        // if (localStorage.getItem('stlogin')) { // 浏览器是否有缓存 有则不需登录
+        //     this.$router.push('home')
+        // }
     },
     
     mounted() {
@@ -180,21 +184,29 @@ export default {
             await login({ username: this.form.username, password: this.form.password }).then(r =>{ // post 不是表单提交
                 console.log(r,'r');
                 this.loading = false
-                // localStorage.setItem('stlogin',this.form.username)
+                if (r.code === 404) {
+                    return this.$message.error('您输入的账号或密码有误')
+                }
+                localStorage.setItem('stlogin',this.form.username)
                 this.$refs.form.resetFields()
-                this.$router.push({name:'home'})
+                this.$router.push({name:'userInfo-one'})
             }, err =>{
                 this.loading = false;
             })
             // await this.$post("/login",this.form).then(r => {
             //     console.log(r, "r");
             //     this.loading = false
-            //     localStorage.setItem('stlogin',this.form.username)
+                // localStorage.setItem('stlogin',this.form.username)
             //     this.$refs.form.resetFields()
             //     this.$router.push('home')
             // },err =>{
             //     this.loading = false
             // });
+        },
+        touristLogin(){ //游客登陆
+            touristLogin().then(r => {
+                this.$router.push({name:'userInfo-one'})
+            })
         },
         registerBtn(){ // 进行注册
             this.$refs.form2.validate( isok =>{

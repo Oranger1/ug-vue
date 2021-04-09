@@ -11,17 +11,18 @@
             </div>
           </el-col>
           <el-col :span="2" style="height: 100%;">
-            <img src="../assets/img/GrubbyLog.png" style="height: 100%;" alt="">
+            <img src="../assets/img/logo.png" style="height: 100%;" alt="">
+            <span style="font-size: 20px;font-weight: bolder;color: rgb(67 67 68); position: absolute;margin: 17px;">长沙地铁</span>
           </el-col>
           <el-col style="height:100%; display: flex; float: right;" :span="3">
             <el-dropdown  @command="userInfos" class="box">
               <span class="el-dropdown-link center">
                 <el-avatar :size="40" src="../assets/img/yz01.png"></el-avatar>
-                <span style="margin-left:15px;">admin</span>
+                <span style="margin-left:15px;">{{ userName }}</span>
                 <i class="el-icon-arrow-down el-icon--right"></i>
               </span>
               <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item command="0">个人信息</el-dropdown-item>
+                <!-- <el-dropdown-item command="0">个人信息</el-dropdown-item> -->
                 <el-dropdown-item command="1">退出登录</el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
@@ -84,6 +85,9 @@
 import userInfo from '../components/user/user'
 export default {
   name: "home",
+  components: {
+    userInfo
+  },
   data() {
     return {
       isCollapse: false,
@@ -91,10 +95,12 @@ export default {
       routerList:[],
       circleUrl:'',
       routerTitleList:[],
+      userName: ''
     }
   },
   created() {
     // console.log(this);
+    this.userName = localStorage.stlogin
     this.routerList = this.$router.options.routes;
     let title = localStorage.getItem('stlRouter') ? JSON.parse(localStorage.getItem('stlRouter')) : '';
     console.log(title,'title');
@@ -103,7 +109,6 @@ export default {
             name:title.name,
             path:title.path,
             title:title.mate.title,
-            // icon:false,
             icon:title.mate.icon
       })
       this.nowIndex = title.path;
