@@ -6,6 +6,7 @@ import { Notification } from 'element-ui';
 // axios.defaults.headers['authorization'] = `Bearer ${token}`;
 
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+axios.defaults.headers.get['Content-Type'] = 'application/json';
 
 // http request 拦截器
 axios.interceptors.request.use(
