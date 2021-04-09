@@ -1,8 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 // import Home from "../views/Home.vue";
-import home from "./modules/manager"
+import manager from "./modules/manager"
 import station from './modules/station'
+import bill from './modules/bill'
+import takeRecord from './modules/takeRecord'
 
 Vue.use(VueRouter);
 
@@ -26,8 +28,10 @@ const routes = [
     name: 'pay',
     component: () => import('../views/pay.vue')
   },
-  home,
-  station
+  station,
+  manager,
+  bill,
+  takeRecord,
   // {
   //   path: '/user-index',
   //   name: 'user-index',

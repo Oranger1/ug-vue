@@ -12,7 +12,7 @@ Vue.config.productionTip = false;
 
 // axios
 import axios from "axios";
-axios.defaults.baseURL = "http://192.168.0.164:5754"
+axios.defaults.baseURL = "http://localhost:5754"
 Vue.prototype.$axios = axios;
 // 饿了么UI
 import ElementUI from 'element-ui';

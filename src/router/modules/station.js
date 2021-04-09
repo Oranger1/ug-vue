@@ -16,6 +16,15 @@ export default {
       component: () => import('../../views/station/station-gailan.vue')
     },
     {
+      path: "/thrid",
+      name: "userInfo-thrid",
+      mate:{
+        title:'线路管理',
+        icon:'el-icon-star-on',
+      },
+      component: () => import('../../views/line/lineInfo.vue')
+    },
+    {
       path: "/two",
       name: "userInfo-two",
       mate:{
