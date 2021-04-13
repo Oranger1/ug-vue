@@ -42,25 +42,17 @@
                   </el-col>
               </el-row>
               <el-table :data="tableData" style="width: 100%;" border stripe>
-                <el-table-column prop="username" label="用户名"  width="150"></el-table-column>
-                <el-table-column prop="mobile" label="手机" width="150"></el-table-column>
-                <el-table-column prop="sex" label="性别" width="120">
-                    <template slot-scope="{ row }">
-                        {{ row.sex | filterSex}}
-                    </template>
+                <el-table-column prop="name" label="地铁线路" ></el-table-column>
+                <el-table-column prop="label" label="标签" ></el-table-column>
+                <el-table-column prop="totalStation" label="总站数"></el-table-column>
+                <el-table-column prop="color" label="颜色" width="200">
+                    <template slot-scope="{row}"><div class="color-wrap" :style="`background-color: ${row.color}`"></div></template>
                 </el-table-column>
-                <el-table-column  prop="email" label="邮箱" width="200"></el-table-column>
-                <el-table-column prop="status" label="是否启用" width="120">
-                    <template slot-scope="{ row }">
-                        {{ row.status | filterStatus }}
-                    </template>
-                </el-table-column>
-                <el-table-column prop="updationTime" label="最后登录时间"  width=""></el-table-column>
                 <el-table-column
                     align="center"
                     fixed="right"
                     label="操作"
-                    width="140">
+                    width="400">
                     <template slot-scope="{ row }">
                         <el-button class="buttons" @click="editor(row)" type="text" size="small">编辑</el-button>
                         <el-popconfirm title="确定删除该条数据吗？" @confirm="del(row)">
@@ -75,13 +67,13 @@
             </div>
           </el-main>
         </el-container>
-        <managerAdd ref="managerAddRef" @getData="getData" userType="manager"></managerAdd>
+        <lineAdd ref="lineAddRef" @getData="getData" userType="line"></lineAdd>
     </div>
 </template>
 
 <script>
-import managerAdd from '@/components/add/addComponents.vue';
-import { pageManagers,delManager } from '../../services/manager/managerService';
+import lineAdd from '@/components/add/addComponents.vue';
+import { pageLines,addLine,delLine,updateLine } from '../../services/line/lineService';
 var that
 export default {
     data () {
@@ -118,7 +110,7 @@ export default {
             if(!this.params.username){
                 this.params.username=null;
             }
-            pageManagers(this.params).then(r =>{
+            pageLines(this.params).then(r =>{
                 console.log(r.records,'r');
                 this.tableData = r.records;
                 this.page = r.page;
@@ -184,7 +176,7 @@ export default {
         } 
     },
     components:{
-        managerAdd,
+        lineAdd,
     }
 }
 </script>
@@ -206,6 +198,11 @@ export default {
     background: #5287E3 !important;
 }
 .buttons{
+    margin-right: 10px;
+}
+.color-wrap{
+    width: 80px;
+    height: 20px;
     margin-right: 10px;
 }
 </style>

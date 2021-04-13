@@ -4,7 +4,7 @@
           <el-header style="height:'';">
               <el-row v-show="!isshow">
                   <el-col :span="6">
-                      <el-input size="medium" clearable v-model="params.username" placeholder="请输入账单流水号">
+                      <el-input size="medium" clearable v-model="params.username" placeholder="请输入乘车码">
                         <i class="el-icon-search el-input__icon" slot="prefix" @click="handleIconClick">
                         </i>
                         <el-button @click="getData" class="filterBtn" style="background: #2769DC; color: #fff; border-radius: 0;" slot="append">搜索</el-button>
@@ -40,10 +40,13 @@
                   </el-col>
               </el-row>
               <el-table :data="tableData" style="width: 100%;" border stripe>
-                <el-table-column prop="orderNumber" label="账单流水号" ></el-table-column>
-                <el-table-column prop="price" label="金额"></el-table-column>
-                <el-table-column prop="payType" label="支付方式" ></el-table-column>
-                <el-table-column prop="updationTime" label="支付时间"></el-table-column>
+                <el-table-column prop="takeRecordNumber" label="乘车码" ></el-table-column>
+                <el-table-column prop="startStation" label="起始站"></el-table-column>
+                <el-table-column prop="endStation" label="终点站" ></el-table-column>
+                <el-table-column prop="orderNumber" label="账单流水号"></el-table-column>
+                <el-table-column prop="status" label="状态"></el-table-column>
+                <el-table-column prop="getOnTime" label="上车时间"></el-table-column>
+                <el-table-column prop="getOffTime" label="下车时间"></el-table-column>
                
             
               </el-table>
@@ -59,7 +62,7 @@
 
 <script>
 
-import { pageBill } from '../../services/billAndRecord/billAndRecordService';
+import { pageTakeRecord } from '../../services/billAndRecord/billAndRecordService';
 var that
 export default {
     data () {
@@ -85,7 +88,7 @@ export default {
     methods: {
         getData(){
             // this.form是高级查询pageBill(this.params).then(r =>{
-            pageBill().then(r =>{
+            pageTakeRecord().then(r =>{
                 console.log(r.records,'r');
                 this.tableData = r.records;
                 this.page = r.page;
