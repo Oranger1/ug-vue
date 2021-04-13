@@ -60,6 +60,23 @@
                     </el-switch>
                 </el-form-item>
         </el-form>
+
+        <el-form v-if="userType == 'line'" :model="form" ref="form" :rules="stationRules">
+                <el-form-item v-if="form.name" label="地铁线路" :label-width="formLabelWidth" prop="name">
+                    <el-input clearable v-model="form.name" autocomplete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="label" :label-width="formLabelWidth" prop="label">
+                    <el-input clearable v-model="form.label" autocomplete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="总站数" :label-width="formLabelWidth" prop="totalStation">
+                    <el-input clearable v-model="form.totalStation" autocomplete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="颜色" :label-width="formLabelWidth" prop="sequence">
+                    <div class="block">
+                        <el-color-picker v-model="form.color"></el-color-picker>
+                    </div>
+                </el-form-item>
+        </el-form>
         
         <div slot="footer" class="dialog-footer">
             <el-button @click="isShow = false">取 消</el-button>
@@ -70,8 +87,8 @@
 
 <script>
 import { updateManager,addManager } from '@/services/manager/managerService';
-import { addStation } from '@/services/station/stationService';
-import { updateStation } from '../../services/station/stationService';
+import { addStation,updateStation } from '@/services/station/stationService';
+import { addLine,updateLine } from '@/services/line/lineService';
     export default {
         props: {
             getData: Array,
@@ -153,12 +170,26 @@ import { updateStation } from '../../services/station/stationService';
                                 this.isShow = false;
                             })
                         }
+                        if(this.userType === 'line'){
+                            addLine(this.form).then(r => {
+                                this.isShow = false;
+                            })
+                        }
                     }else{
-                        updateManager(this.form).then(r =>{
-                        this.isShow = false;
+                        if(this.userType === 'manager'){
+                             updateManager(this.form).then(r =>{
+                             this.isShow = false;
                         })
+                        }
+                       
                         if(this.userType === 'station'){
                             updateStation(this.form).then(r => {
+                                this.isShow = false;
+                            })
+                        }
+
+                        if(this.userType === 'line'){
+                            updateLine(this.form).then(r => {
                                 this.isShow = false;
                             })
                         }

@@ -1,19 +1,19 @@
 export default {
-    path: "/home",
-    name: "home",
+    path: "/bill",
+    name: "bill",
     mate:{
       title:'账单管理'
     },
     component: () => import('../../views/Home.vue'),
     children:[
       {
-        path: "/userInfo/one",
-        name: "userInfo-one",
+        path: "/bill/one",
+        name: "bill-one",
         mate:{
           title:'账单管理',
           icon:'el-icon-user-solid',
         },
-        component: () => import('../../views/manager/managerInfo.vue')
+        component: () => import('../../views/bill/billInfo.vue')
       }
     ],
 }

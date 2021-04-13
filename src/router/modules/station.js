@@ -8,7 +8,7 @@ export default {
   children:[
     {
       path: "/one",
-      name: "userInfo-one",
+      name: "station-one",
       mate:{
         title:'地铁站概览',
         icon:'el-icon-user-solid',
@@ -17,7 +17,7 @@ export default {
     },
     {
       path: "/thrid",
-      name: "userInfo-thrid",
+      name: "station-thrid",
       mate:{
         title:'线路管理',
         icon:'el-icon-star-on',
@@ -26,7 +26,7 @@ export default {
     },
     {
       path: "/two",
-      name: "userInfo-two",
+      name: "station-two",
       mate:{
         title:'地铁站管理',
         icon:'el-icon-star-on',
