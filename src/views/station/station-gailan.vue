@@ -18,6 +18,8 @@
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="submitForm">提交</el-button>
+          <el-button @click="dialogVisible = true" style="margin-left:10px">去乘车</el-button>
+          <span class="tips" style="margin-left:5px">支付完请保存乘车码</span>
         </el-form-item>
       </el-form>
       <div>
@@ -28,24 +30,19 @@
           <canvas id="canvas" ref ="canva" width="292" height="292"></canvas>
           <div v-if="priceModel.publicKey && priceModel.status == 0" class="tips" style="margin-left:10px;">请扫码支付</div>
           <div v-if="priceModel.status == 1" class="tips" style="margin-left:10px;">支付成功， 乘车码: {{ priceModel.code }}</div>
+          <div v-if="priceModel.status == 1" class="tips" style="margin-left:10px;"><el-button @click="dialogVisible = true">去乘车</el-button></div>
         </div>
-      </div>
-
-      <el-button type="primary" size="medium" round @click="dialogVisible = true">入站</el-button> 
-      <el-button type="success" size="medium" round @click="dialogVisible = true">出站</el-button>
-
-     
+      </div> 
     </div>
-     <el-dialog
-      title="提示"
-      :visible.sync="dialogVisible"
-      width="30%"
-      :before-close="handleClose">
-        <span>这是一段信息</span>
-        <span slot="footer" class="dialog-footer">
-        <el-button @click="dialogVisible = false">取 消</el-button>
-        <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
-        </span>
+     <el-dialog title="请乘车" :visible.sync="dialogVisible" width="30%">
+        <div>
+          <div class="tips" style="margin-bottom:30px;">乘车码: <el-input v-model="code" placeholder="请输入乘车码" style="width:50%; margin-left:10px" /></div>
+        </div>
+        <div slot="footer" class="dialog-footer">
+          <el-button type="primary" size="medium" round @click="toChenChe">入站</el-button> 
+          <el-button type="success" size="medium" round @click="toChuZhan">出站</el-button>
+          <el-button @click="dialogVisible = false" size="medium" round>关闭</el-button>
+        </div>
     </el-dialog>
   </div>
 
@@ -56,7 +53,7 @@ import * as d3 from 'd3'
 import QRCode from 'qrcode'
 import * as tubeMap from '@/js/map/d3-tube-map.js'
 import londonTubeJson from './london-tube.json'
-import { queryMapObj,getPrice, queryPayStatus } from '@/services/station/stationService';
+import { queryMapObj,getPrice, queryPayStatus, takeOn, takeOff } from '@/services/station/stationService';
 
 export default {
   data () {
@@ -69,7 +66,9 @@ export default {
       file: null,
       container: null,
       interval: null,
-      priceModel: { price: '', publicKey: '', status: 0, code: '' }
+      priceModel: { price: '', publicKey: '', status: 0, code: '' },
+      dialogVisible: false,
+      code: ''
     }
   },
   mounted() {
@@ -146,6 +145,30 @@ export default {
           }
         })
       }, 2000);
+    },
+    toChenChe () {
+      if (!this.code) {
+        this.$message.error('请输入乘车码')
+        return
+      }
+      takeOn({ takeRecordNumber: this.code }).then((res) => {
+        if(res) {
+          this.$message.success('请输入乘车码')
+          this.dialogVisible = false
+        }
+      })
+    },
+    toChuZhan () {
+      if (!this.code) {
+        this.$message.error('请输入乘车码')
+        return
+      }
+      takeOff({ takeRecordNumber: this.code }).then((res) => {
+        if(res) {
+          this.$message.success('感谢你乘车，欢迎下次光临')
+          this.dialogVisible = false
+        }
+      })
     }
   }
 }
