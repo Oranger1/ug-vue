@@ -28,7 +28,7 @@
                             <i v-show="loading" class="el-icon-loading"></i>
                             登陆
                         </button>
-                        <button :disabled="loading" class="button" type="button" @click="login">
+                        <button :disabled="loading" class="button" type="button" @click="touristLogin">
                             <i v-show="loading" class="el-icon-loading"></i>
                             游客登陆
                         </button>
