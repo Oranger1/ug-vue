@@ -28,7 +28,7 @@ axios.interceptors.request.use(
 //http response 拦截器
 axios.interceptors.response.use(
     response => {
-        if(response.config.url == '/login'){
+        if(response.config.url == '/login' || response.config.url == '/touristLogin'){
             // debugger
             // if (response.config.headers.authorization) {
             //     console.log("这里是token" + response.config.headers.authorization);

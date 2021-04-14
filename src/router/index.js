@@ -10,11 +10,6 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '*',
-    name: '404',
-    component: () => import('../views/404.vue')
-  },
-  {
     path: '/',
     redirect:'login' // 默认跳登录页面  可以直接改成home
   },
@@ -22,6 +17,11 @@ const routes = [
     path: '/login',
     name: 'login',
     component: () => import('../views/login.vue')
+  },
+  {
+    path: '/passenger',
+    name: 'passenger',
+    component: () => import('@/views/tourist.vue')
   },
   {
     path: '/pay',
@@ -37,6 +37,11 @@ const routes = [
   //   name: 'user-index',
   //   component: () => import('../views/user/user-index.vue')
   // },
+  {
+    path: '*',
+    name: '404',
+    component: () => import('../views/404.vue')
+  }
 ];
 
 const router = new VueRouter({
