@@ -181,6 +181,7 @@ export default {
             this.loading = true
             formData.append('username',this.form.username)
             formData.append('password',this.form.password)
+            sessionStorage.setItem('isTourist', 0)
             await login({ username: this.form.username, password: this.form.password }).then(r =>{ // post 不是表单提交
                 console.log(r,'r');
                 this.loading = false
@@ -205,7 +206,8 @@ export default {
         },
         touristLogin(){ //游客登陆
             touristLogin().then(r => {
-                this.$router.push({name:'userInfo-one'})
+                localStorage.setItem('stlogin', '游客')
+                this.$router.push('/passenger')
             })
         },
         registerBtn(){ // 进行注册
