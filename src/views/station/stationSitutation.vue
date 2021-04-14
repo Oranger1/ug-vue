@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { pageTakeRecord,pageBill } from '../../services/billAndRecord/billAndRecordService';
+import { ListTakeRecord,ListBill } from '../../services/billAndRecord/billAndRecordService';
 
 export default {
   data () {
