@@ -8,9 +8,18 @@ export default {
   children:[
     {
       path: "/one",
+      name: "station-four",
+      mate:{
+        title:'地铁运营情况',
+        icon:'el-icon-user-solid',
+      },
+      component: () => import('../../views/station/stationSitutation.vue')
+    },
+    {
+      path: "/four",
       name: "station-one",
       mate:{
-        title:'地铁站概览',
+        title:'购票乘车',
         icon:'el-icon-user-solid',
       },
       component: () => import('../../views/station/station-gailan.vue')
@@ -32,6 +41,6 @@ export default {
         icon:'el-icon-star-on',
       },
       component: () => import('../../views/station/stationInfo.vue')
-    }
+    },
   ],
 }

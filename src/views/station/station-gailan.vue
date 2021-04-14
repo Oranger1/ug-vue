@@ -30,8 +30,25 @@
           <div v-if="priceModel.status == 1" class="tips" style="margin-left:10px;">支付成功， 乘车码: {{ priceModel.code }}</div>
         </div>
       </div>
+
+      <el-button type="primary" size="medium" round @click="dialogVisible = true">入站</el-button> 
+      <el-button type="success" size="medium" round @click="dialogVisible = true">出站</el-button>
+
+     
     </div>
+     <el-dialog
+      title="提示"
+      :visible.sync="dialogVisible"
+      width="30%"
+      :before-close="handleClose">
+        <span>这是一段信息</span>
+        <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+        </span>
+    </el-dialog>
   </div>
+
 </template>
 
 <script>
@@ -128,7 +145,7 @@ export default {
             clearInterval(that.interval)
           }
         })
-      }, 20000);
+      }, 2000);
     }
   }
 }
@@ -148,6 +165,9 @@ export default {
     padding: 20px;
     background-color: #eff2f5;
     margin: 0 10px 20px;
+    .el-button+.el-button {
+      margin-left: 50px;
+    }
     .tips{
       font-size: 12px;
       color: red;
