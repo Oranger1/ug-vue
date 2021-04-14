@@ -24,10 +24,11 @@ export function ListBill() {
   
 }
 
-export function ListTakeRecord() { 
+export function ListTakeRecord(params) { 
   return http({
       url: '/takeRecord/query',
       method: 'post',
+      data: params
   })
   
 }

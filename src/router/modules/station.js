@@ -16,7 +16,7 @@ export default {
       component: () => import('../../views/station/stationSitutation.vue')
     },
     {
-      path: "/one",
+      path: "/four",
       name: "station-one",
       mate:{
         title:'购票乘车',
@@ -42,6 +42,5 @@ export default {
       },
       component: () => import('../../views/station/stationInfo.vue')
     },
-    
   ],
 }
