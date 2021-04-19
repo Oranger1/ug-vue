@@ -3,16 +3,16 @@
         <el-container>
           <el-header style="height:'';">
               <el-row v-show="!isshow">
-                  <el-col :span="6">
+                  <!-- <el-col :span="6">
                       <el-input size="medium" clearable v-model="params.username" placeholder="请输入管理员姓名">
                         <i class="el-icon-search el-input__icon" slot="prefix" @click="handleIconClick">
                         </i>
                         <el-button @click="getData" class="filterBtn" style="background: #2769DC; color: #fff; border-radius: 0;" slot="append">搜索</el-button>
                       </el-input>
-                  </el-col>
-                  <el-col :span="6" style="display: flex; line-height: 40px; margin-left:15px;">
+                  </el-col> -->
+                  <!-- <el-col :span="6" style="display: flex; line-height: 40px; margin-left:15px;">
                       <el-link @click="advancedQuery(1)" :underline="false" icon="el-icon-s-operation">高级查询</el-link>
-                  </el-col>
+                  </el-col> -->
               </el-row>
               <el-row v-show="isshow" style="margin-bottom:15px;">
                   <el-col style="text-align: left;">

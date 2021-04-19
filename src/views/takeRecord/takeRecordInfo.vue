@@ -44,7 +44,9 @@
                 <el-table-column prop="startStation" label="起始站"></el-table-column>
                 <el-table-column prop="endStation" label="终点站" ></el-table-column>
                 <el-table-column prop="orderNumber" label="账单流水号"></el-table-column>
-                <el-table-column prop="status" label="状态"></el-table-column>
+                <el-table-column prop="status" label="状态">
+                    <template slot-scope="{row}">{{ row.status == '2' ? '已出站' : row.status == '1' ? '已入站' : '未入站' }}</template>
+                </el-table-column>
                 <el-table-column prop="getOnTime" label="上车时间"></el-table-column>
                 <el-table-column prop="getOffTime" label="下车时间"></el-table-column>
                

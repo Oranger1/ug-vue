@@ -136,6 +136,7 @@ export default {
     startTimeout () {
       const that = this
       clearInterval(that.interval)
+      debugger;
       that.interval = setInterval(() => {
         queryPayStatus({ publicKey: that.priceModel.publicKey }).then((res) => {
           if (res) {

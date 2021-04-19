@@ -55,6 +55,14 @@ export function toPay(params) {
   })
 }
 
+export function queryPayStatus(params) {
+  return http({
+    url: 'queryIsApily',
+    method: 'get',
+    params
+  })
+}
+
 export function takeOn(params) {
   return http({
     url: '/takeRecord/getOn',
